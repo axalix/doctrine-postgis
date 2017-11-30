@@ -68,6 +68,12 @@ class CreateTableSqlGenerator
         return $sql;
     }
 
+    /**
+     * @param Table $table
+     * @param array $columns
+     * @param array $options
+     * @return array
+     */
     public function getCreateTableSQL(Table $table, array $columns, array $options = array())
     {
         $tableName = $table->getQuotedName($this->platform);
